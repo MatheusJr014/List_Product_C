@@ -32,7 +32,7 @@ namespace Ex_list
         }
 
         private double _valor;
-        public double valor
+        public double Valor
         {
             get=> _valor;
             set
@@ -57,6 +57,14 @@ namespace Ex_list
                 throw new Exception("Valor inválido. Deve ser maior que 0"); 
             }
         }
+
+
+        public double CalcularTotal()
+        {
+            return Quantidade * Valor; 
+        }
+
+
 
 
     }
