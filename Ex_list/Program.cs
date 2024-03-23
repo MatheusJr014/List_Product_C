@@ -7,16 +7,21 @@ namespace Ex_list
     {
         public Produto(string nome, int quantidade, double valor)
         {
-            Produto.ValidaQuantidade(quantidade); 
+            Produto.ValidaQuantidade(quantidade);
             Produto.ValidaValor(valor);
             this._nome = nome;
             this._quantidade = quantidade;
-
-            private string _nome; 
-            public string Nome { get => _nome; set => _nome = value })
+            this._valor = valor;
+        }
+        private string _nome; 
+        public string Nome 
+        {
+            get => _nome;
+            set => _nome = value;
+        }
             
-            private int _quantidade;
-            public int Quantidade
+        private int _quantidade;
+        public int Quantidade
         {
             get => _quantidade;
             set
@@ -49,7 +54,7 @@ namespace Ex_list
         {
             if (valor <= 0)
             {
-                throw new Exception("Valor inválido. Deve ser maior que 0")
+                throw new Exception("Valor inválido. Deve ser maior que 0"); 
             }
         }
 
